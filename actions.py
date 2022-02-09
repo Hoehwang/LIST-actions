@@ -17,7 +17,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-res = pd.read_csv("./actions/RESPONSE_EXP_FIN.csv", encoding = 'utf8')
+res = pd.read_csv("./actions/RESPONSE_EXP_LIST.csv", encoding = 'utf8')
 syn = pd.read_csv("./actions/SYN.csv", encoding = 'utf8')
 rec_ta = pd.read_csv('./actions/recommend_table_list.csv', encoding = 'utf8')
 
