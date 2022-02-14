@@ -103,7 +103,7 @@ class ActionRephraseResponse(Action):
                             break
                     if slot_changed == False and '<'+slot+'_FEATURE>' in list(default_tag_changer.keys()):
                         if slot == 'LOCATION-TYPE':
-                            nlg_form = re.sub('<'+slot+'_FEATURE>\S* ?', '', nlg_form)
+                            nlg_form = re.sub('<'+slot+'_FEATURE>(에 있는 |\S* ?)', '', nlg_form)
                         else:
                             nlg_form = nlg_form.replace('<'+slot+'_FEATURE>', default_tag_changer['<'+slot+'_FEATURE>'])
 
@@ -146,7 +146,7 @@ class ActionRephraseResponse(Action):
                             break
                     if slot_changed == False and '<'+slot+'_FEATURE>' in list(default_tag_changer.keys()):
                         if slot == 'LOCATION-TYPE':
-                            nlg_form = re.sub('<'+slot+'_FEATURE>\S* ?', '', nlg_form)
+                            nlg_form = re.sub('<'+slot+'_FEATURE>(에 있는 |\S* ?)', '', nlg_form)
                         else:
                             nlg_form = nlg_form.replace('<'+slot+'_FEATURE>', default_tag_changer['<'+slot+'_FEATURE>'])
                     
